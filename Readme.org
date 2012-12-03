@@ -1,0 +1,5 @@
+* bnbeckwith Awesomewm config
+
+  This is my setup for the =awesome= window manager.
+
+  Much of this was copied and edited from the Arch wiki.
