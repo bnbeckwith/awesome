@@ -99,9 +99,11 @@ awful.util.spawn_with_shell( awful.util.getdir("config") .. "/theme/mkicons --si
 
 
 -- {{{ Taglist
-theme.taglist_squares_sel   = awful.util.getdir("config") .. "theme/taglist/squarefz.png"
-theme.taglist_squares_unsel = awful.util.getdir("config") .. "theme/taglist/squarez.png"
---theme.taglist_squares_resize = "false"
+theme.taglist_squares_sel = "/usr/share/awesome/themes/default/taglist/squarefw.png"
+theme.taglist_squares_unsel = "/usr/share/awesome/themes/default/taglist/squarew.png"
+-- theme.taglist_squares_sel   = awful.util.getdir("config") .. "theme/taglist/squarefz.png"
+-- theme.taglist_squares_unsel = awful.util.getdir("config") .. "theme/taglist/squarez.png"
+-- theme.taglist_squares_resize = "true"
 -- }}}
 
 -- {{{ Misc
