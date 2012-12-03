@@ -44,6 +44,10 @@ terminal = "urxvt"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
+-- Setup Dmenu with theme colors
+dmenu_options = " -nf " .. beautiful.fg_normal .. " -nb " .. beautiful.bg_normal .. " -sb " .. beautiful.bg_focus .. " "
+dmpc_cmd =  "export DMENU_OPTIONS='" .. dmenu_options .. "' && dmpc"
+
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
@@ -249,7 +253,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
+    -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
 
     awful.key({ modkey }, "x",
               function ()
@@ -257,7 +261,10 @@ globalkeys = awful.util.table.join(
                   mypromptbox[mouse.screen].widget,
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
-              end)
+              end),
+    -- Music
+    awful.key({ modkey }, "m", function () awful.util.spawn_with_shell(dmpc_cmd) end)
+
 )
 
 clientkeys = awful.util.table.join(
