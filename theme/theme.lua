@@ -3,6 +3,8 @@
 --    By Adrian C. (anrxc)   --
 -------------------------------
 
+local awful = require("awful")
+
 -- {{{ Main
 theme = {}
 theme.wallpaper_cmd = { awful.util.getdir("config") .. "/theme/nasaBackground.sh" }
